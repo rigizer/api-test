@@ -76,10 +76,10 @@ public class BlogService {
 				return readBody(con.getErrorStream());
 			}
 		} catch (IOException e) {
-            throw new RuntimeException("API REQUEST AND RESPONSE FAILTURE: ", e);
-        } finally {
-            con.disconnect();
-        }
+			throw new RuntimeException("API REQUEST AND RESPONSE FAILTURE: ", e);
+		} finally {
+			con.disconnect();
+		}
 	}
 	
 	private HttpURLConnection connect(String apiUrl) {
@@ -87,10 +87,10 @@ public class BlogService {
 			URL url = new URL(apiUrl);
 			return (HttpURLConnection) url.openConnection();
 		} catch (MalformedURLException e) {
-            throw new RuntimeException("API URL IS WRONG [" + apiUrl + "]: ", e);
-        } catch (IOException e) {
-            throw new RuntimeException("CONNECT FAILTURE [" + apiUrl + "]: ", e);
-        }
+			throw new RuntimeException("API URL IS WRONG [" + apiUrl + "]: ", e);
+		} catch (IOException e) {
+			throw new RuntimeException("CONNECT FAILTURE [" + apiUrl + "]: ", e);
+		}
 	}
 	
 	private String readBody(InputStream body) {
@@ -106,7 +106,7 @@ public class BlogService {
 
             return responseBody.toString();
 		} catch (IOException e) {
-            throw new RuntimeException("API RESPONSER READ FAILTURE: ", e);
-        }
+			throw new RuntimeException("API RESPONSER READ FAILTURE: ", e);
+		}
 	}
 }
