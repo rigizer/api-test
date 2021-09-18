@@ -111,8 +111,8 @@ public class YoutubeService {
 			StringBuilder responseBody = new StringBuilder();
 			
 			String line;
-            while ((line = lineReader.readLine()) != null) {
-                responseBody.append(line);
+			while ((line = lineReader.readLine()) != null) {
+            	responseBody.append(line);
             }
 
             return responseBody.toString();
