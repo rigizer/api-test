@@ -101,10 +101,10 @@ public class BlogService {
 			
 			String line;
 			while ((line = lineReader.readLine()) != null) {
-            	responseBody.append(line);
-            }
+				responseBody.append(line);
+			}
 
-            return responseBody.toString();
+			return responseBody.toString();
 		} catch (IOException e) {
 			throw new RuntimeException("API RESPONSER READ FAILTURE: ", e);
 		}
